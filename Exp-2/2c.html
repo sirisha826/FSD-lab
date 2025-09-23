@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f5f7fb; padding:20px; }
+    h1 { text-align:center; }
+    form { max-width:800px; margin:0 auto; background:#fff; padding:18px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+    table { width:100%; border-collapse:collapse; }
+    caption { font-weight:700; margin-bottom:8px; text-align:left; }
+    th, td { padding:8px 10px; vertical-align:middle; }
+    th { text-align:right; width:28%; padding-right:20px; }
+    td input, td select, td textarea {
+      width:100%; padding:8px; border:1px solid #bbb; border-radius:4px;
+    }
+    .inline { display:inline-block; margin-right:12px; }
+    .buttons { text-align:center; padding-top:12px; }
+  </style>
+</head>
+<body>
+  <h1>Student Registration Form</h1>
+
+  <form id="regForm">
+    <table>
+      <caption>Fill the form carefully and click Submit</caption>
+
+      <tr>
+        <th>First Name:</th>
+        <td><input type="text" name="firstname" required></td>
+      </tr>
+      <tr>
+        <th>Last Name:</th>
+        <td><input type="text" name="lastname" required></td>
+      </tr>
+      <tr>
+        <th>Email:</th>
+        <td><input type="email" name="email" required></td>
+      </tr>
+      <tr>
+        <th>Password:</th>
+        <td><input type="password" name="password" required></td>
+      </tr>
+      <tr>
+        <th>Age:</th>
+        <td><input type="number" name="age" min="10" max="100" required></td>
+      </tr>
+      <tr>
+        <th>Date of Birth:</th>
+        <td><input type="date" name="dob" required></td>
+      </tr>
+      <tr>
+        <th>Gender:</th>
+        <td>
+          <label class="inline"><input type="radio" name="gender" value="Male" required> Male</label>
+          <label class="inline"><input type="radio" name="gender" value="Female"> Female</label>
+          <label class="inline"><input type="radio" name="gender" value="Other"> Other</label>
+        </td>
+      </tr>
+      <tr>
+        <th>Interests:</th>
+        <td>
+          <label class="inline"><input type="checkbox" name="interest" value="Programming"> Programming</label>
+          <label class="inline"><input type="checkbox" name="interest" value="Sports"> Sports</label>
+        </td>
+      </tr>
+      <tr>
+        <th>Course:</th>
+        <td>
+          <select name="course" required>
+            <option value="">-- Select a course --</option>
+            <option>Web Development</option>
+            <option>Data Science</option>
+            <option>AI & ML</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>Address:</th>
+        <td><textarea name="address" rows="3"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="buttons">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <script>
+    document.getElementById("regForm").addEventListener("submit", function(e){
+      e.preventDefault(); // stop real submit
+      alert("✅ Form submitted successfully!");
+    });
+  </script>
+</body>
+</html>
