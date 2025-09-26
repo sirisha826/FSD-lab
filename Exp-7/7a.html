@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document Object Example</title>
+  <script>
+    function showDocumentInfo() {
+      var info = "Page URL: " + document.URL + "<br>" +
+                 "Page Title: " + document.title + "<br>" +
+                 "Domain: " + document.domain + "<br>" +
+                 "Last Modified: " + document.lastModified;
+      document.getElementById("docInfo").innerHTML = info;
+      document.write("<p>This text is added using document.write()</p>");
+    }
+  </script>
+</head>
+<body>
+  <h2>Document Object Properties and Methods</h2>
+  <button onclick="showDocumentInfo()">Show Document Info</button>
+  <div id="docInfo"></div>
+</body>
+</html>

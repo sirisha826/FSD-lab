@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User-Defined Object Example</title>
+  <script>
+    function showUserObject() {
+      function Person(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+
+        this.fullName = function() {
+          return this.firstName + " " + this.lastName;
+        };
+
+        Object.defineProperty(this, "ageInMonths", {
+          get: function() {
+            return this.age * 12;
+          },
+          set: function(months) {
+            this.age = months / 12;
+          }
+        });
+      }
+
+      var person1 = new Person("Dimple", "Shetty", 20);
+      var info = "Full Name: " + person1.fullName() + "<br>";
+      info += "Age: " + person1.age + "<br>";
+      info += "Age in Months: " + person1.ageInMonths + "<br>";
+
+      person1.ageInMonths = 360;
+      info += "Updated Age after setting months to 360: " + person1.age + "<br>";
+
+      document.getElementById("userObjInfo").innerHTML = info;
+    }
+  </script>
+</head>
+<body>
+  <h2>User-Defined Object with Properties, Methods, Accessors, and Constructor</h2>
+  <button onclick="showUserObject()">Show User Object Info</button>
+  <div id="userObjInfo"></div>
+</body>
+</html>
