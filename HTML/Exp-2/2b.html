@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>College Timetable</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: auto;
+      width: 90%;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      background: #f8f8f8;
+    }
+    caption {
+      font-size: 1.2em;
+      padding: 12px;
+      color: #333;
+      font-weight: bold;
+    }
+    th, td {
+      border: 1.5px solid #444;
+      padding: 8px 12px;
+      text-align: center;
+    }
+    th {
+      background: #e2e2e2;
+    }
+    tr:nth-child(even) td {
+      background: #f2f2f2;
+    }
+    tr:hover td {
+      background: #d0e4fc;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <caption>Department of Information Technology - Time Table (Sem V, Sec A)</caption>
+    <tr>
+      <th>Day / Period</th>
+      <th>1<br>(9:00-10:00)</th>
+      <th>2<br>(10:00-11:00)</th>
+      <th>Break<br>(11:00-11:10)</th>
+      <th>3<br>(11:10-12:10)</th>
+      <th>4<br>(12:10-1:10)</th>
+      <th>Lunch<br>(1:10-2:10)</th>
+      <th>5<br>(2:10-3:10)</th>
+      <th>6<br>(3:10-4:30)</th>
+    </tr>
+    <tr>
+      <td>Monday</td>
+      <td>AT & CD</td>
+      <td>DWDM</td>
+      <td rowspan="6" style="background:#ededed">Break</td>
+      <td>AOR</td>
+      <td>AJ</td>
+      <td rowspan="6" style="background:#ededed">Lunch</td>
+      <td colspan="2">AJ Lab (R & D Project Lab)</td>
+    </tr>
+    <tr>
+      <td>Tuesday</td>
+      <td>CN</td>
+      <td>TPL</td>
+      <td>DWDM</td>
+      <td>AOR</td>
+      <td>AT & CD</td>
+      <td>AJ</td>
+    </tr>
+    <tr>
+      <td>Wednesday</td>
+      <td>AJ</td>
+      <td>CN</td>
+      <td colspan="2">TT</td>
+      <td colspan="2">CN Lab (R & D Project Lab)</td>
+    </tr>
+    <tr>
+      <td>Thursday</td>
+      <td colspan="2">Communication Skill</td>
+      <td>AOR</td>
+      <td>AJ</td>
+      <td>AT & CD</td>
+      <td>CN</td>
+    </tr>
+    <tr>
+      <td>Friday</td>
+      <td>DWDM</td>
+      <td>CN</td>
+      <td colspan="2">UI Lab (R & D Project Lab)</td>
+      <td colspan="2">Aptitude</td>
+    </tr>
+    <tr>
+      <td>Saturday</td>
+      <td>AOR</td>
+      <td>FST</td>
+      <td colspan="2">FSD Lab (IT Computer Lab)</td>
+      <td>DWDM</td>
+      <td>AT & CD</td>
+    </tr>
+  </table>
+</body>
+</html>

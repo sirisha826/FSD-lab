@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Thumbnail Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #333;
+            margin: 20px 0;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .gallery img:hover {
+            border-color: #555;
+            transform: scale(1.1);
+        }
+        a {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Responsive Thumbnail Image Gallery</h1>
+
+    <div class="gallery">
+        <a href="image1.jpg" target="_blank">
+            <img src="image1.jpg" alt="Image 1">
+        </a>
+        <a href="image2.jpg" target="_blank">
+            <img src="image2.jpg" alt="Image 2">
+        </a>
+        <a href="image3.jpg" target="_blank">
+            <img src="image3.jpg" alt="Image 3">
+        </a>
+        <a href="image4.jpg" target="_blank">
+            <img src="image4.jpg" alt="Image 4">
+        </a>
+        <a href="image5.jpg" target="_blank">
+            <img src="image5.jpg" alt="Image 5">
+        </a>
+    </div>
+
+</body>
+</html>
