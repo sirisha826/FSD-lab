@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Background Image Tilt Example</title>
+    <style>
+        body {
+            height: 2000px;
+            margin: 0;
+            position: relative;
+            font-family: Arial, sans-serif;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            height: 400px;
+            background-image: url('example.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-50%, -50%) rotate(10deg);
+            z-index: -1;
+        }
+
+        h1, p {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Background Image Tilt Example</h1>
+<p>Scroll the page and notice the image stays in place while tilted horizontally.</p>
+
+</body>
+</html>
