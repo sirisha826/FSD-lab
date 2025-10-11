@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Conditional Statements and Loops</title>
+  <script>
+    function displayData() {
+      const person = {
+        name: "Cutie",
+        age: 20,
+        city: "New York"
+      };
+
+      let result = "<h3>Using for-in loop:</h3>";
+      for (let key in person) {
+        result += key + ": " + person[key] + "<br>";
+      }
+
+      const entries = Object.entries(person);
+
+      result += "<h3>Using forEach loop:</h3>";
+      entries.forEach(([key, value]) => {
+        result += key + ": " + value + "<br>";
+      });
+
+      result += "<h3>Using for-of loop:</h3>";
+      for (let [key, value] of entries) {
+        result += key + ": " + value + "<br>";
+      }
+
+      document.getElementById("output").innerHTML = result;
+      alert("Data displayed using for-in, forEach, and for-of loops.");
+    }
+  </script>
+</head>
+<body onload="displayData()">
+  <h1>JavaScript Conditional Statements and Loops</h1>
+  <h2>Program to Print Data in Object Using for-in, forEach, and for-of Loops</h2>
+  <div id="output"></div>
+</body>
+</html>
