@@ -6,7 +6,6 @@
     function showWeekDay() {
       let day = parseInt(prompt("Enter a number (1 to 7) for the day of the week:"));
       let message = "";
-
       switch(day) {
         case 1: message = "Sunday"; break;
         case 2: message = "Monday"; break;
@@ -17,7 +16,6 @@
         case 7: message = "Saturday"; break;
         default: message = "Invalid input! Please enter a number between 1 and 7.";
       }
-
       document.getElementById("output").innerHTML = message;
       alert(message); // Show in information dialog
     }

@@ -4,20 +4,31 @@
   <title>JavaScript Input Methods</title>
   <script>
     function getInput() {
+      // Taking input using prompt()
       var name = prompt("Enter your name:");
+      
+      // Taking input using an input field
       var age = document.getElementById("ageInput").value;
+
+      // Displaying in console
       console.log("Name (from prompt): " + name);
       console.log("Age (from input field): " + age);
-      document.getElementById("output").innerHTML = "Name: " + name + "<br>Age: " + age;
+
+      // Displaying on webpage
+      document.getElementById("output").innerHTML = 
+        "Name: " + name + "<br>Age: " + age;
     }
   </script>
 </head>
 <body>
   <h2>Different Ways to Take Input in JavaScript</h2>
+
   <p>Enter your age:</p>
   <input type="number" id="ageInput">
+
   <br><br>
   <button onclick="getInput()">Submit</button>
+
   <p id="output"></p>
 </body>
 </html>

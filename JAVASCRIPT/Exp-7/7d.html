@@ -3,21 +3,30 @@
 <head>
   <title>Math Object Example</title>
   <script>
+    // Function to demonstrate Math object properties and methods
     function mathExample() {
-      var number = 7.8;
+      var number = 7.8; // Example number
+      
+      // Using various Math methods
       var info = "Number: " + number + "<br>";
-      info += "Round: " + Math.round(number) + "<br>";
-      info += "Floor: " + Math.floor(number) + "<br>";
-      info += "Ceil: " + Math.ceil(number) + "<br>";
-      info += "Square Root: " + Math.sqrt(number) + "<br>";
-      info += "Random Number (0-1): " + Math.random();
+      info += "Round: " + Math.round(number) + "<br>";    // Rounds to nearest integer
+      info += "Floor: " + Math.floor(number) + "<br>";    // Rounds down to nearest integer
+      info += "Ceil: " + Math.ceil(number) + "<br>";      // Rounds up to nearest integer
+      info += "Square Root: " + Math.sqrt(number) + "<br>"; // Calculates square root
+      info += "Random Number (0-1): " + Math.random();    // Generates a random number between 0 and 1
+
+      // Displaying result in the HTML page
       document.getElementById("mathInfo").innerHTML = info;
     }
   </script>
 </head>
 <body>
   <h2>Math Object Properties and Methods</h2>
+
+  <!-- Button to trigger the mathExample() function -->
   <button onclick="mathExample()">Show Math Info</button>
+
+  <!-- Div to display the results -->
   <div id="mathInfo"></div>
 </body>
 </html>

@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Document Object Example</title>
+  <title>JavaScript Input Methods</title>
   <script>
-    function showDocumentInfo() {
-      var info = "Page URL: " + document.URL + "<br>" +
-                 "Page Title: " + document.title + "<br>" +
-                 "Domain: " + document.domain + "<br>" +
-                 "Last Modified: " + document.lastModified;
-      document.getElementById("docInfo").innerHTML = info;
-      document.write("<p>This text is added using document.write()</p>");
+    function getInput() {
+      // Taking input using prompt()
+      var name = prompt("Enter your name:");
+      
+      // Taking input using an input field
+      var age = document.getElementById("ageInput").value;
+
+      // Displaying in console
+      console.log("Name (from prompt): " + name);
+      console.log("Age (from input field): " + age);
+
+      // Displaying on webpage
+      document.getElementById("output").innerHTML = 
+        "Name: " + name + "<br>Age: " + age;
     }
   </script>
 </head>
 <body>
-  <h2>Document Object Properties and Methods</h2>
-  <button onclick="showDocumentInfo()">Show Document Info</button>
-  <div id="docInfo"></div>
+  <h2>Different Ways to Take Input in JavaScript</h2>
+
+  <p>Enter your age:</p>
+  <input type="number" id="ageInput">
+
+  <br><br>
+  <button onclick="getInput()">Submit</button>
+
+  <p id="output"></p>
 </body>
 </html>

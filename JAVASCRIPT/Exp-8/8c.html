@@ -8,21 +8,18 @@
       for (let i = 1; i <= 10; i++) {
         result += i + " ";
       }
-
       result += "<h3>Using while loop:</h3>";
       let j = 1;
       while (j <= 10) {
         result += j + " ";
         j++;
       }
-
       result += "<h3>Using do-while loop:</h3>";
       let k = 1;
       do {
         result += k + " ";
         k++;
       } while (k <= 10);
-
       document.getElementById("output").innerHTML = result;
       alert("Numbers from 1 to 10 are displayed using for, while, and do-while loops.");
     }

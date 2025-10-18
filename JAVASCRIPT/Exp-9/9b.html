@@ -18,7 +18,6 @@
       }
       return fib.slice(0, n + 1).join(", ");
     }
-
     function isPrime(n) {
       let primes = [];
       for (let i = 2; i <= n; i++) {
@@ -33,7 +32,6 @@
       }
       return primes.join(", ");
     }
-
     function isPalindrome(n) {
       let str = n.toString();
       let rev = str.split("").reverse().join("");
@@ -43,7 +41,6 @@
     function showResult(type) {
       let num = parseInt(document.getElementById("num").value);
       let output = "";
-
       if (type === "fact") {
         output = "Factorial: " + factorial(num);
       } else if (type === "fib") {
@@ -53,7 +50,6 @@
       } else if (type === "pal") {
         output = "Palindrome: " + isPalindrome(num);
       }
-
       document.getElementById("out").innerHTML = output;
     }
   </script>
@@ -61,17 +57,13 @@
 <body>
   <h1>JavaScript Functions and Events</h1>
   <h2>Factorial, Fibonacci, Prime & Palindrome Checker</h2>
-
   <label>Enter a number: </label>
   <input type="number" id="num" placeholder="Enter number">
-
   <br><br>
-
   <button onclick="showResult('fact')">Factorial</button>
   <button onclick="showResult('fib')">Fibonacci</button>
   <button onclick="showResult('prime')">Prime</button>
   <button onclick="showResult('pal')">Palindrome</button>
-
   <div id="out" style="margin-top:20px; font-weight:bold;"></div>
 </body>
 </html>

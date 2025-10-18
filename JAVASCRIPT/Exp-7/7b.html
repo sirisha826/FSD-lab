@@ -3,20 +3,32 @@
 <head>
   <title>Window Object Example</title>
   <script>
+    // Function to display window object information
     function showWindowInfo() {
+      // Collecting various window properties
       var info = "Window Width: " + window.innerWidth + "<br>" +
                  "Window Height: " + window.innerHeight + "<br>" +
                  "Current URL: " + window.location.href + "<br>" +
                  "Browser Name: " + window.navigator.appName;
+
+      // Displaying window information on the webpage
       document.getElementById("winInfo").innerHTML = info;
+
+      // Displaying an alert box
       window.alert("This is an alert using window.alert()");
+
+      // Displaying a confirm dialog box
       window.confirm("Do you like this example?");
     }
   </script>
 </head>
 <body>
   <h2>Window Object Properties and Methods</h2>
+
+  <!-- Button to trigger the JavaScript function -->
   <button onclick="showWindowInfo()">Show Window Info</button>
+
+  <!-- Area to display window information -->
   <div id="winInfo"></div>
 </body>
 </html>

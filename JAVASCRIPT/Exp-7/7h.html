@@ -4,15 +4,15 @@
   <title>User-Defined Object Example</title>
   <script>
     function showUserObject() {
+      // Constructor function
       function Person(firstName, lastName, age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-
         this.fullName = function() {
           return this.firstName + " " + this.lastName;
         };
-
+        // Define getter and setter
         Object.defineProperty(this, "ageInMonths", {
           get: function() {
             return this.age * 12;
@@ -21,13 +21,13 @@
             this.age = months / 12;
           }
         });
-      }
+      } // <-- missing closing brace added here
 
+      // Create an object and display info
       var person1 = new Person("Dimple", "Shetty", 20);
       var info = "Full Name: " + person1.fullName() + "<br>";
       info += "Age: " + person1.age + "<br>";
       info += "Age in Months: " + person1.ageInMonths + "<br>";
-
       person1.ageInMonths = 360;
       info += "Updated Age after setting months to 360: " + person1.age + "<br>";
 

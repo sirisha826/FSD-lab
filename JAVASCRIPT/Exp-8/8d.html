@@ -9,24 +9,20 @@
         age: 20,
         city: "New York"
       };
-
       let result = "<h3>Using for-in loop:</h3>";
       for (let key in person) {
         result += key + ": " + person[key] + "<br>";
       }
 
       const entries = Object.entries(person);
-
       result += "<h3>Using forEach loop:</h3>";
       entries.forEach(([key, value]) => {
         result += key + ": " + value + "<br>";
       });
-
       result += "<h3>Using for-of loop:</h3>";
       for (let [key, value] of entries) {
         result += key + ": " + value + "<br>";
       }
-
       document.getElementById("output").innerHTML = result;
       alert("Data displayed using for-in, forEach, and for-of loops.");
     }

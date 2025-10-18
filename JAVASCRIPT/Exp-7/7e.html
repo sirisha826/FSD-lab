@@ -3,22 +3,31 @@
 <head>
   <title>String Object Example</title>
   <script>
+    // Function to demonstrate String object properties and methods
     function stringExample() {
-      var text = "Hello World";
+      var text = "Hello World"; // Example string
+      
+      // Using various string methods and properties
       var info = "Original String: " + text + "<br>";
-      info += "Length: " + text.length + "<br>";
-      info += "Uppercase: " + text.toUpperCase() + "<br>";
-      info += "Lowercase: " + text.toLowerCase() + "<br>";
-      info += "Character at index 0: " + text.charAt(0) + "<br>";
-      info += "Substring (0-5): " + text.substring(0,5) + "<br>";
-      info += "Includes 'World': " + text.includes("World");
+      info += "Length: " + text.length + "<br>";               // Returns the number of characters
+      info += "Uppercase: " + text.toUpperCase() + "<br>";     // Converts to uppercase
+      info += "Lowercase: " + text.toLowerCase() + "<br>";     // Converts to lowercase
+      info += "Character at index 0: " + text.charAt(0) + "<br>"; // Returns character at position 0
+      info += "Substring (0-5): " + text.substring(0,5) + "<br>"; // Extracts substring from index 0 to 4
+      info += "Includes 'World': " + text.includes("World");    // Checks if substring "World" exists
+      
+      // Displaying the result on the webpage
       document.getElementById("stringInfo").innerHTML = info;
     }
   </script>
 </head>
 <body>
   <h2>String Object Properties and Methods</h2>
+
+  <!-- Button to trigger the stringExample() function -->
   <button onclick="stringExample()">Show String Info</button>
+
+  <!-- Div to display the output -->
   <div id="stringInfo"></div>
 </body>
 </html>
